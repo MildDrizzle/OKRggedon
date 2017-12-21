@@ -1,4 +1,4 @@
-import { db } from './firebase'
+import { db, auth, PROVIDER } from './firebase'
 
 // const users = db.collection('users')
 const objectives = db.collection('objectives')
@@ -15,5 +15,17 @@ export default {
       .catch(error => {
         console.error('Error getting documents: ', error)
       })
+  },
+
+  getCurrentUser () {
+    return auth.currentUser
+  },
+
+  async signIn () {
+    return await auth.signInWithPopup(PROVIDER)
+  },
+
+  logout () {
+    return auth.signOut()
   }
 }
