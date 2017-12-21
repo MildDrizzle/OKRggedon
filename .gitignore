@@ -13,4 +13,4 @@ yarn-error.log*
 *.sln
 
 # Project 
-/src/settings.js
+/src/api/settings.js
