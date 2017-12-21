@@ -10,7 +10,7 @@ import BtnAdd from '@/components/BtnAdd'
 
 export default {
   name: 'home',
-  components: { BtnAdd, BtnLogin },
+  components: { BtnAdd },
 
   data () {
     return {
